@@ -1,13 +1,12 @@
-**Chatbot Inteligente - Loja GMV Tech**
+# **Chatbot Inteligente - Loja GMV Tech**
 
 Este repositório contém um chatbot inteligente em Python desenvolvido para simular interações com clientes de uma loja de tecnologia (Loja GMV Tech). O assistente responde dúvidas frequentes, sugere produtos e encaminha para atendimento humano quando necessário.
 _______________________________________________________________________________
-**Índice**
+# **Índice**
 
 - Funcionalidades
 - Tecnologias
 - Estrutura de Pastas
-- Pré-requisitos
 - Instalação
 - Uso
 - Exemplos de Interação
@@ -38,7 +37,7 @@ _______________________________________________________________________________
     > (Opcional para expansão: NLTK, spaCy, ChatterBot, Transformers, Rasa)
 _______________________________________________________________________________
 Estrutura de Pastas
-
+```bash
 ├── data/
 │   ├── intenções.json           
 │   ├── respostas.json           
@@ -49,26 +48,39 @@ Estrutura de Pastas
 ├── src/
 │   └── chatbot.py               
 ├── README.md                    
-└── requirements.txt             
+└── requirements.txt
+```           
 ______________________________________________________________________________
 **Instalação**
 
 1. Clone este repositório:
 
-    git clone https://github.com/V1mendes/ChatBot-Loja-Tech.git
+    ```bash
+   git clone https://github.com/V1mendes/ChatBot-Loja-Tech.git
+    ```
+    ```bash
     cd gmvtech-chatbot
+    ``` 
 
-2. Crie e ative um ambiente virtual (opcional, mas recomendado):
+3. Crie e ative um ambiente virtual (opcional, mas recomendado):
 
+    ```bash
     python3 -m venv venv
+    ``` 
+    ```bash
     source venv/bin/activate   # Linux/Mac
+    ``` 
+    ```bash
     venv\Scripts\activate    # Windows
+    ```
 
-3. Instale as dependências:
+4. Instale as dependências:
 
+    ```bash
     pip install -r requirements.txt
+    ```
 
-4. Certifique-se de que os modelos serializados (vectorizer.joblib, encoder.joblib, modelo.joblib) estejam na pasta data/modelos/.
+5. Certifique-se de que os modelos serializados (vectorizer.joblib, encoder.joblib, modelo.joblib) estejam na pasta data/modelos/.
 _____________________________________________________________________________
 **Uso**
 
