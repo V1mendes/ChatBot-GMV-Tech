@@ -55,18 +55,18 @@ ______________________________________________________________________________
 
 1. Clone este repositório:
 
-git clone https://github.com/seu-usuario/gmvtech-chatbot.git
-cd gmvtech-chatbot
+    git clone https://github.com/V1mendes/ChatBot-Loja-Tech.git
+    cd gmvtech-chatbot
 
 2. Crie e ative um ambiente virtual (opcional, mas recomendado):
 
-python3 -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate    # Windows
+    python3 -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate    # Windows
 
 3. Instale as dependências:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 4. Certifique-se de que os modelos serializados (vectorizer.joblib, encoder.joblib, modelo.joblib) estejam na pasta data/modelos/.
 _____________________________________________________________________________
