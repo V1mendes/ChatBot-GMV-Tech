@@ -15,26 +15,26 @@ _______________________________________________________________________________
 
 1. Saudações e menu inicial
 2. Respostas contextuais sobre:
-    > Horário de funcionamento
-    > Produtos disponíveis
-    > Serviços oferecidos
-    > Agendamento de atendimento
-    > Formas de pagamento
-    > Opções de entrega
-    > Sugestões de produtos
-    > Encaminhamento para atendimento humano
-3. Simulação de sistema de recomendação simples
-4. Encerramento adequado da conversa
-5. Estrutura de agente inteligente com classificação de intenções (Naive Bayes)
+   - Horário de funcionamento
+   - Produtos disponíveis
+   - Serviços oferecidos
+   - Agendamento de atendimento
+   - Formas de pagamento
+   - Opções de entrega
+   - Sugestões de produtos
+   - Encaminhamento para atendimento humano
+4. Simulação de sistema de recomendação simples
+5. Encerramento adequado da conversa
+6. Estrutura de agente inteligente com classificação de intenções (Naive Bayes)
 _______________________________________________________________________________
 # **Tecnologias**
 
 - Python 3.x
 - Bibliotecas:
-    > scikit-learn
-    > joblib
-    > re (expressões regulares)
-    > (Opcional para expansão: NLTK, spaCy, ChatterBot, Transformers, Rasa)
+  - scikit-learn
+  - joblib
+  - re (expressões regulares)
+  - (Opcional para expansão: NLTK, spaCy, ChatterBot, Transformers, Rasa)
 _______________________________________________________________________________
 #  **Estrutura de Pastas**
 ```bash
