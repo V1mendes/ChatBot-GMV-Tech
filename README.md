@@ -1,3 +1,7 @@
+**Chatbot Inteligente - Loja GMV Tech**
+
+Este repositório contém um chatbot inteligente em Python desenvolvido para simular interações com clientes de uma loja de tecnologia (Loja GMV Tech). O assistente responde dúvidas frequentes, sugere produtos e encaminha para atendimento humano quando necessário.
+_______________________________________________________________________________
 **Índice**
 
 - Funcionalidades
