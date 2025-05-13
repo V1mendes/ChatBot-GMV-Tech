@@ -1,0 +1,10 @@
+{
+    "Horario": ["Nosso horário de funcionamento é de segunda a sábado, das 9h às 18h."],
+    "Produto": ["Temos celulares, notebooks, monitores e diversos acessórios disponíveis na loja."],
+    "Serviços": ["Sim, oferecemos assistência técnica e manutenção para computadores e celulares."],
+    "Agendamento": ["Sim, é possível agendar um atendimento pelo telefone ou pessoalmente na loja."],
+    "Pagamento": ["Aceitamos dinheiro, cartão de débito/crédito, Pix e também parcelamos em até 6x."],
+    "Entrega": ["Fazemos entregas com prazos que variam de acordo com a região e disponibilidade do produto."],
+    "Sugestão": ["Recomendamos os nossos notebooks da linha Dell Inspiron, com ótimo desempenho e preço acessível."],
+    "Atendimento Humano": ["Claro! Você pode entrar em contato com um atendente pelo telefone (11) 99999-9999."]
+}

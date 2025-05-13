@@ -1,0 +1,58 @@
+{
+    "Horario": [
+        "Qual é o horário de funcionamento da loja?",
+        "A loja abre aos sábados?",
+        "Vocês funcionam aos domingos?",
+        "Que horas vocês fecham?",
+        "Qual o expediente da loja?"
+    ],
+    "Produto": [
+        "Vocês vendem celulares?",
+        "Quais produtos estão disponíveis?",
+        "Tem notebook à venda?",
+        "Vocês trabalham com acessórios para computador?",
+        "Posso comprar um monitor aí?"
+    ],
+    "Serviços": [
+        "Vocês consertam computadores?",
+        "A loja oferece assistência técnica?",
+        "Fazem manutenção em celulares?",
+        "Vocês oferecem suporte técnico?",
+        "Realizam limpeza de notebook?"
+    ],
+    "Agendamento": [
+        "Preciso marcar um horário para atendimento?",
+        "Como agendo um serviço?",
+        "É possível agendar manutenção?",
+        "Vocês fazem atendimento com hora marcada?",
+        "Consigo agendar pelo telefone?"
+    ],
+    "Pagamento": [
+        "Quais formas de pagamento vocês aceitam?",
+        "Posso pagar com cartão de crédito?",
+        "Vocês parcelam as compras?",
+        "Aceitam Pix?",
+        "Dá pra pagar em dinheiro?"
+    ],
+    "Entrega": [
+        "Vocês fazem entregas?",
+        "Qual o prazo de entrega?",
+        "A loja entrega produtos comprados?",
+        "Vocês entregam no mesmo dia?",
+        "Fazem entrega para fora da cidade?"
+    ],
+    "Sugestão": [
+        "Pode me sugerir um produto?",
+        "Quais produtos você recomenda?",
+        "Tem alguma sugestão de compra?",
+        "O que você indica para um bom custo-benefício?",
+        "Quais os mais vendidos?"
+    ],
+    "Atendimento Humano": [
+        "Quero falar com um atendente.",
+        "Pode me transferir para um humano?",
+        "Preciso de atendimento humano.",
+        "Tem como falar com alguém da loja?",
+        "Quero falar com uma pessoa, não com o robô."
+    ]
+}
