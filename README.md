@@ -59,7 +59,7 @@ ______________________________________________________________________________
    git clone https://github.com/V1mendes/ChatBot-GMV-Tech.git
     ```
     ```bash
-    cd gmvtech-chatbot
+    cd chatbot
     ``` 
 
 3. Crie e ative um ambiente virtual (opcional, mas recomendado):
