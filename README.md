@@ -56,7 +56,7 @@ ______________________________________________________________________________
 1. Clone este repositório:
 
     ```bash
-   git clone https://github.com/V1mendes/ChatBot-Loja-Tech.git
+   git clone https://github.com/V1mendes/ChatBot-GMV-Tech.git
     ```
     ```bash
     cd gmvtech-chatbot
