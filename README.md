@@ -11,7 +11,7 @@ _______________________________________________________________________________
 - Uso
 - Exemplos de Interação
 _______________________________________________________________________________
-**Funcionalidades**
+# **Funcionalidades**
 
 1. Saudações e menu inicial
 2. Respostas contextuais sobre:
@@ -27,7 +27,7 @@ _______________________________________________________________________________
 4. Encerramento adequado da conversa
 5. Estrutura de agente inteligente com classificação de intenções (Naive Bayes)
 _______________________________________________________________________________
-**Tecnologias**
+# **Tecnologias**
 
 - Python 3.x
 - Bibliotecas:
@@ -36,7 +36,7 @@ _______________________________________________________________________________
     > re (expressões regulares)
     > (Opcional para expansão: NLTK, spaCy, ChatterBot, Transformers, Rasa)
 _______________________________________________________________________________
-Estrutura de Pastas
+#  **Estrutura de Pastas**
 ```bash
 ├── data/
 │   ├── intenções.json           
@@ -51,7 +51,7 @@ Estrutura de Pastas
 └── requirements.txt
 ```           
 ______________________________________________________________________________
-**Instalação**
+# **Instalação**
 
 1. Clone este repositório:
 
@@ -82,19 +82,21 @@ ______________________________________________________________________________
 
 5. Certifique-se de que os modelos serializados (vectorizer.joblib, encoder.joblib, modelo.joblib) estejam na pasta data/modelos/.
 _____________________________________________________________________________
-**Uso**
+# **Uso**
 
 Para executar o chatbot, rode o script:
 
+```bash
 python src/chatbot.py
+```
 
 Ao iniciar, o assistente exibirá um menu com opções de intenções. Digite o número correspondente para selecionar a categoria de sua dúvida e em seguida digite sua pergunta ou escolha uma pergunta de exemplo.
 
-Comandos disponíveis
+**Comandos disponíveis**
 
 Digite 0 a qualquer momento para sair do atendimento.
 ____________________________________________________________________________
-**Exemplos de Interação**
+# **Exemplos de Interação**
 
 Olá! Sou o assistente da Loja GMV Tech. Como posso ajudar?
 
