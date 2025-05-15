@@ -23,6 +23,7 @@ _______________________________________________________________________________
    - Opções de entrega
    - Sugestões de produtos
    - Encaminhamento para atendimento humano
+3. Sugestão de perguntas relacionadas quando a entrada não é reconhecida
 4. Simulação de sistema de recomendação simples
 5. Encerramento adequado da conversa
 6. Estrutura de agente inteligente com classificação de intenções (Naive Bayes)
@@ -59,7 +60,7 @@ ______________________________________________________________________________
    git clone https://github.com/V1mendes/ChatBot-GMV-Tech.git
     ```
     ```bash
-    cd chatbot
+    cd ChatBot-GMV-Tech
     ``` 
 
 3. Crie e ative um ambiente virtual (opcional, mas recomendado):
@@ -90,7 +91,7 @@ Para executar o chatbot, rode o script:
 python src/chatbot.py
 ```
 
-Ao iniciar, o assistente exibirá um menu com opções de intenções. Digite o número correspondente para selecionar a categoria de sua dúvida e em seguida digite sua pergunta ou escolha uma pergunta de exemplo.
+Ao iniciar, o assistente exibirá um menu com opções de intenções. Após selecionar uma categoria, digite sua pergunta relacionada. Caso o assistente não reconheça a intenção corretamente, ele irá sugerir perguntas similares para ajudar na sua escolha.
 
 **Comandos disponíveis**
 
