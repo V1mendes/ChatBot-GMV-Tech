@@ -1,17 +1,14 @@
-# Importação de bibliotecas essenciais
-import random                           # Usado para escolher respostas aleatórias
-import joblib                           # Usado para carregar modelos treinados salvos
-import re                               # Usado para limpar o texto do usuário (remoção de caracteres especiais)
-from sklearn.feature_extraction.text import TfidfVectorizer  # Representa texto como vetores numéricos
-from sklearn.preprocessing import LabelEncoder               # Codifica/decodifica rótulos de classes (intenções)
-from sklearn.naive_bayes import MultinomialNB                # Algoritmo de classificação usado no modelo
+import random                           
+import joblib                           
+import re                               
+from sklearn.feature_extraction.text import TfidfVectorizer  
+from sklearn.preprocessing import LabelEncoder               
+from sklearn.naive_bayes import MultinomialNB                
 
-# Carregamento dos modelos treinados anteriormente
-vectorizer = joblib.load('./data/modelos/vectorizer.joblib')   # TF-IDF vectorizer treinado
-encoder = joblib.load('./data/modelos/encoder.joblib')         # Codificador de intenções
-modelo = joblib.load('./data/modelos/modelo.joblib')           # Classificador Naive Bayes treinado
+vectorizer = joblib.load('./data/modelos/vectorizer.joblib')   
+encoder = joblib.load('./data/modelos/encoder.joblib')         
+modelo = joblib.load('./data/modelos/modelo.joblib')          
 
-# Base de intenções com exemplos de perguntas
 intencoes = {
     "Horario": [
         "Qual é o horário de funcionamento da loja?",
@@ -67,7 +64,6 @@ intencoes = {
     ]
 }
 
-# Respostas possíveis para cada intenção
 respostas_por_intencao = {
     "Horario": ["Nosso horário de funcionamento é de segunda a sábado, das 9h às 18h."],
     "Produto": ["Temos celulares, notebooks, monitores e diversos acessórios disponíveis na loja."],
@@ -79,40 +75,34 @@ respostas_por_intencao = {
     "Atendimento Humano": ["Claro! Você pode entrar em contato com um atendente pelo telefone (11) 99999-9999."]
 }
 
-# Mensagem exibida ao encerrar o atendimento
 MENSAGEM_DESPEDIDA = (
     "\n---------------------------------------------------------\n"
     "Bot: Agradecemos pela conversa! Se precisar de algo, estaremos por aqui. Até logo!\n"
     "---------------------------------------------------------\n"
 )
 
-# Função que limpa e padroniza a entrada do usuário
 def limpar_texto(texto):
-    texto = texto.lower()  # Converte para minúsculas
-    texto = re.sub(r'[^a-zà-ú0-9\s]', '', texto)  # Remove pontuação
+    texto = texto.lower()  
+    texto = re.sub(r'[^a-zà-ú0-9\s]', '', texto)  
     return texto
 
-# Função que exibe a mensagem de saída e finaliza o programa
 def mensagem_despedida():
     print(MENSAGEM_DESPEDIDA)
     exit()
 
-# Função que analisa a pergunta e retorna uma resposta adequada
 def responder(pergunta, intencao_escolhida):
     pergunta_limpa = limpar_texto(pergunta)
 
-    if pergunta.strip() == '0':  # Encerrar se o usuário digitar "0"
+    if pergunta.strip() == '0':  
         mensagem_despedida()
 
-    vetor = vectorizer.transform([pergunta_limpa])        # Vetoriza a pergunta
-    predicao = modelo.predict(vetor)                      # Faz a previsão da intenção
-    intencao_prevista = encoder.inverse_transform(predicao)[0]  # Decodifica a intenção prevista
+    vetor = vectorizer.transform([pergunta_limpa])        
+    predicao = modelo.predict(vetor)                     
+    intencao_prevista = encoder.inverse_transform(predicao)[0]  
 
     if intencao_prevista == intencao_escolhida:
-        # Intenção prevista bate com a escolhida: responder diretamente
         return random.choice(respostas_por_intencao[intencao_prevista])
     else:
-        # Intenção prevista diferente: sugerir perguntas relacionadas à intenção escolhida
         print("\n---------------------------------------------------------")
         print("Bot: Parece que sua pergunta não foi reconhecida. Aqui estão algumas opções relacionadas ao tópico escolhido:")
         print("---------------------------------------------------------\n")
@@ -121,7 +111,6 @@ def responder(pergunta, intencao_escolhida):
             print(f"{idx}. {pergunta_exemplo}")
         print("0. Voltar para o menu")
 
-        # Usuário escolhe uma sugestão ou volta ao menu
         while True:
             escolha_pergunta = input("\nInsira o número correspondente: ").strip()
             if escolha_pergunta == '0':
@@ -133,12 +122,10 @@ def responder(pergunta, intencao_escolhida):
                 print("Número inválido. Tente novamente.")
                 print("---------------------------------------------------------")
 
-# Função principal do chatbot (interface de interação com o usuário)
 def chatbot():
-    intencoes_lista = list(intencoes.keys())  # Lista das intenções disponíveis
+    intencoes_lista = list(intencoes.keys())  
 
     while True:
-        # Exibe o menu principal
         print("\nOlá! Sou o assistente da Loja GMV Tech. Como posso ajudar?")
         print("\nDigite o número da opção desejada para iniciarmos o atendimento:\n")
         for idx, item in enumerate(intencoes_lista, start=1):
@@ -153,7 +140,6 @@ def chatbot():
             print(f"Você escolheu: {intencao_escolhida}")
 
             while True:
-                # Usuário digita a pergunta dentro da intenção escolhida
                 entrada = input("\nDigite a sua pergunta: ").strip()
                 if entrada == '0':
                     mensagem_despedida()
@@ -161,13 +147,12 @@ def chatbot():
                 resposta = responder(entrada, intencao_escolhida)
 
                 if resposta == "voltar_menu":
-                    break  # Retorna ao menu principal
+                    break  
                 elif resposta:
                     print("\n---------------------------------------------------------")
                     print(f"Bot: {resposta}")
                     print("---------------------------------------------------------")
 
-                    # Oferece ao usuário a opção de continuar ou encerrar
                     print("\nPodemos te ajudar em algo mais?\n")
                     print("1. Sim. Desejo fazer uma nova pergunta")
                     print("2. Encerrar conversa\n")
@@ -189,5 +174,4 @@ def chatbot():
             print("Opção inválida. Tente novamente.")
             print("---------------------------------------------------------")
 
-# Início da aplicação
 chatbot()
